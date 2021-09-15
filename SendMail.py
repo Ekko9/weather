@@ -4,10 +4,10 @@ from weather_utils import get_weather_li
 from get_city import get_CityName
 
 
-mailto_list = ["keep1024@sina.com", "alan.fu@ucloud.cn", "seunie.fan@ucloud.cn"]
+mailto_list = ["xxx@sina.com", "xxx@qq.com"]
 mail_host = "smtp.sina.cn"  # 设置服务器
-mail_user = "keep1024@sina.com"    # 用户名
-mail_pass = "Fu18339800770@"   # 口令
+mail_user = "xxx@sina.com"    # 用户名
+mail_pass = "passwd"   # 口令
 
 
 def html_table(lol):
@@ -21,7 +21,7 @@ def html_table(lol):
 
 
 def send_mail(to_list, sub, content):     # 定义一个函数，收件人、标题、邮件内容
-    me = "keep1024@sina.com"+"<"+mail_user+">"   # 发件人定义,这里要和认证帐号一致才行的
+    me = "xxx@sina.com"+"<"+mail_user+">"   # 发件人定义,这里要和认证帐号一致才行的
     msg = MIMEText(content, _subtype='html', _charset='utf-8')  # 这里看email模块的说明，这里构造内容
     msg['Subject'] = sub
     msg['From'] = me
